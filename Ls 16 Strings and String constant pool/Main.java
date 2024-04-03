@@ -3,6 +3,8 @@ From Java Docs:
 The String class represents character strings.
 All string literals in Java Programs are implemented as instance of this class
 A pool of strings, initially empty, is maintained privately by the class String.
+String literals with the same content are interned, meaning they are stored only once in memory and reused if encountered again.
+
 */
 
 public class Main{
@@ -64,6 +66,7 @@ public class Main{
         // It creates a new String object that contains the concatenation of "Tirthraj" literal and " Mahajan" literal
         // And then the reference of the newly created object is stored in s5
         // Note that the result of concatenation "Tirthraj Mahajan" is NOT stored in the string constant pool
+        // Thus String are considered immutable in Java
 
         s6 += " Mahajan";
         // Now JVM does NOT create a new string literal " Mahajan" as it already exists in string constant pool.
