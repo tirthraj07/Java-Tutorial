@@ -19,6 +19,15 @@ There is an implicit super(); in the constructor of each class that calls the su
 class Base{
     public Base(){
         super();        // This is implicit by default, but we can explicitly mention it as well.
+
+        /*
+         * But what exactly is it calling?
+         * We haven't explicitly extended any class to Base Class.
+         * Then what does super actually call?
+         * Well, by default, all Classes in java extend the 'Object' class which is built in
+         * So super() calls the constructor of the Object class which is empty constructor
+         */
+
         System.out.println("This is default constructor of Base Class");
     }
 
@@ -49,6 +58,30 @@ class Derived extends Base{
     }
 }
 
+/*
+ * We can also explicitly mention to extend from the 'Object' class.
+ * From Docs:
+ * Class {@code Object} is the root of the class hierarchy.
+ * Every class has {@code Object} as a superclass. All objects,
+ * including arrays, implement the methods of this class.
+ * 
+ public class Object {
+
+    // Constructs a new object.
+    @IntrinsicCandidate
+    public Object() {} // As you can see, it is an empty constructor
+
+ */
+
+class tempClass extends Object {
+    public tempClass(){
+        super(); // Calls the constructor of the 'Object' class
+        /*
+         * As you can see from the Docs, the constructor of Object class is empty
+         * This it does not do anything.
+         */
+    }
+}
 
 public class Main{
     public static void main(String[] args) {
