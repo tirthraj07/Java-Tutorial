@@ -46,5 +46,6 @@ class Main{
         BufferedReader bf = new BufferedReader(in);
         int a = Integer.parseInt(bf.readLine());
         System.out.println(a);
+        bf.close();
     }
 }
