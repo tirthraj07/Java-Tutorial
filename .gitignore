@@ -72,7 +72,6 @@ target/
 /.nb-gradle/
 build/
 !**/src/main/**/build/
-!**/src/test/**/build/
 
 ### VS Code ###
 .vscode/
